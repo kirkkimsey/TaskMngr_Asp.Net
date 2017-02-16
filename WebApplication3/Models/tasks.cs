@@ -8,34 +8,34 @@ using System.Web;
 namespace WebApplication3.Models
 {
     [Table("Tasks")]
-    public class tasks
+    public class Tasks
     {
         public int ID { get; set; }
 
         [Display(Name = "Assigned Tasks")]
-        public string Owner { get; set; }
+        public int OwnerID { get; set; }
         public string Title { get; set; }
         public string Description { get; set; }
 
         //fk on priority table
-        public int Priority { get; set; }
+        public int PriorityID { get; set; }
 
         //fk on status table
-        public string status { get; set; }
+        public int StatusID { get; set; }
 
         //fk on user table
-        public int AssignedTo { get; set; }
+        public int? AssignedToID { get; set; }
         public DateTime DateCreated { get; set; }
         public DateTime DueDate { get; set; }
         public DateTime CompleteDate { get; set; }
 
-        [ForeignKey("Owner")]
+        [ForeignKey("OwnerID")]
         public virtual User TaskOwner { get; set; }
-        [ForeignKey("AssignedTo")]
+        [ForeignKey("AssignedToID")]
         public virtual User AssignedUser { get; set; }
-        [ForeignKey("Priority")]
+        [ForeignKey("PriorityID")]
         public virtual Priority TaskPriority { get; set; }
-        [ForeignKey("Status")]
+        [ForeignKey("StatusID")]
         public virtual Status TaskStatus { get; set; }
 
     }

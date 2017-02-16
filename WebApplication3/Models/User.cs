@@ -18,6 +18,8 @@ namespace WebApplication3.Models
         public string email { get; set;}
         public string pNumber { get; set;}
         public DateTime DOB { get; set;}
+        public string uName { get; set; }
+        public string pWord { get; set; }
 
     }
 }
