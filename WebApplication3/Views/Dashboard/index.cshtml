@@ -1,0 +1,72 @@
+﻿<style>
+    .alert {
+    margin-top: -1px;
+    }
+    .nav-tabs {
+    float:right;
+    }
+    </style>
+@{
+    ViewBag.Title = "Dashboard";
+}
+
+<h2>Navigation</h2>
+
+<div class="col-md-4">
+<div class="panel panel-info">
+    <div class="panel-heading">
+        <h3 class="panel-title">Coordinates</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="list-group">
+            <li class="list-group-item">
+                <span class="badge">1</span>
+                Alerts
+            </li>
+            <li class="list-group-item">
+                <span class="badge">14</span>
+               Tasks
+            </li>
+            <li class="list-group-item">
+                <span class="badge">2</span>
+                Teams
+            </li>
+            <li class="list-group-item">
+                <span class="badge">1</span>
+                Messages
+            </li>
+            <li class="list-group-item">
+                <span class="badge">1</span>
+                Settings
+            </li>
+        </ul>
+    </div>
+</div>
+</div>
+    <div class="col-md-8">
+    <div class="alert alert-dismissible alert-success">
+        <button type="button" class="close" data-dismiss="alert">&times;</button>
+        <strong>Welcome!</strong> @User.Identity.Name 
+    </div>
+    <div class="panel panel-default">   
+     <div class="panel-heading"><h3 class="panel-title">Triangulation</h3></div>
+        <div class="panel-body">
+            <ul class="nav nav-tabs">
+                <li class="active"><a href="#home" data-toggle="tab">Day</a></li>
+                <li><a href="#week" data-toggle="tab">Week</a></li>
+                <li class="#month" data-toggle="tab"><a>Month</a></li>
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                        Settings<span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#dropdown1" data-toggle="tab">Action</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#dropdown2" data-toggle="tab">Another action</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
